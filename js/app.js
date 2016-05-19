@@ -1,13 +1,10 @@
-//$(document).on('DOMContentLoaded', function() {
-//  var box = $('#box');
-//  console.log('box ready', box);
-//  TweenLite.to(box, 3, { x: 600 });
-//  TweenLite.to(box, 2, {top:300 });
-//  TweenLite.to(box, 2, { opacity:0 });
-//});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var box = document.getElementById('box');
-  TweenLite.to(box, 3, { x: 600 });
-  console.log('animating maybe', box);
-})
+$(document).on('DOMContentLoaded', function() {
+  // Animate the box to 600px to the right in 3 seconds
+  var animationOptions = {
+    x: 600,
+    onComplete: function() {
+      TweenLite.to('.box', 3, { y: 200 });
+    }
+  }
+  TweenLite.to('.box', 1, animationOptions);
+});
