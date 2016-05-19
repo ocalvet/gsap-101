@@ -3,7 +3,7 @@ $(document).on('DOMContentLoaded', function() {
   var animationOptions = {
     x: 600,
     onComplete: function() {
-      TweenLite.to('.box', 3, { y: 200, rotation: '+=360' });
+      TweenLite.to('.box', 3, { y: 200, rotation: '+=720', scaleX: '0.5', scaleY: '0.5' });
     }
   }
   TweenLite.to('.box', 1, animationOptions);
